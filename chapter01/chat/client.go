@@ -13,8 +13,8 @@ func (c *client) read() {
 		} else {
 			break
 		}
-		c.socket.Close()
 	}
+	c.socket.Close()
 }
 
 // write
