@@ -64,6 +64,7 @@ var upgrader = &websocket.Upgrader{
 func (r *room) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	socket, err := upgrader.Upgrade(w, req, nil)
 	if err != nil {
+		// fatal: 致命的→つまりエラーログ
 		log.Fatal("ServeHTTP：", err)
 		return
 	}
